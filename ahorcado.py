@@ -1,8 +1,8 @@
 #Juego de ahorcado
 print("\n\n*** BIENVENIDO AL JUEGO DE AHORCADO ***")
 Palabra=input("Digite una palabra: ").upper()
+Palabra=list(Palabra)
 
-print(Palabra)
 
 def isLetra():
     while True:
@@ -21,8 +21,8 @@ def Ahorcado(Palabra, Intentos, Pb_Oculta, cntAcertadas):
     lgtd_Pb = len(Palabra)
 
     if lgtd_Pb == cntAcertadas:
-        print("\n\nFELICIDADES, HAS DESCUBIERTO LA PALABRA\n\n")
-        Intentos = -20
+        print("FELICIDADES, HAS DESCUBIERTO LA PALABRA")
+        Intentos = -200
         return Intentos, cntAcertadas  # Salir de la función si se ha ganado
 
     AdivinoLetra = False
@@ -49,8 +49,8 @@ Vidas = 5
 Acertadas = 0
 while Vidas > 0:
     Vidas, Acertadas = Ahorcado(Palabra, Vidas, Palabra_Oculta, Acertadas)
-    if (Vidas == -20):  # Salir del ciclo si se ha ganado
+    if (Vidas == -200):  # Salir del ciclo si se ha ganado
         break
     
 if(Vidas==0):
-    print(f"\n\nHAS PERDIDO, LA PALABRA ERA: {Palabra}\n HAS ACERTADO {Acertadas} LETRA(S)\n\n")
+    print(f"\n\nHAS PERDIDO, LA PALABRA ERA: {Palabra}\n HAS ACERTADO {Acertadas} LETRA(S)")
