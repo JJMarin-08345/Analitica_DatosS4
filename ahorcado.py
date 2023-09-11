@@ -2,7 +2,7 @@
 print("\n\n*** BIENVENIDO AL JUEGO DE AHORCADO ***")
 Palabra=input("Digite una palabra: ").upper()
 Palabra=list(Palabra)
-
+print("hola mundo")
 
 def isLetra():
     while True:
