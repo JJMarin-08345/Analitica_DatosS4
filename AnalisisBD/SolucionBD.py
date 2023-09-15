@@ -56,8 +56,41 @@ DataAsNumpy = np.concatenate((PRP_0_20.values, PRP_21_100.values, PRP_101_200.va
 X = DataAsNumpy[:,1:9]
 Y = DataAsNumpy[:,9]
 
-print(X.shape)
-print(Y.shape)
+# print(X.shape)
+# print(Y.shape)
 
 print(X)
-print(Y)
+# print(Y)
+
+print()
+a= (X[0][0])
+b= (X[-1][-1])
+c= eval(X[-1][0])
+d= (X[0][-1])
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+
+#Promedio suma de las 4 esquinas de la variable X
+lista=[a,b,c,d]
+suma=0
+for num in lista :
+    suma += int(num) 
+pmdo_4Esq=np.mean(suma)
+
+#Sacar el promedio de la segunda fila en la variable X
+#Me toco sacar el promedio de la primera pq el resto tienen variables string
+w = X[0]
+print(w)
+sumaFila1=0
+for num in w:
+    sumaFila1 += int(num)
+pmdo_Fila1=np.mean(sumaFila1)
+
+#Editar la ultima fila de la variable X
+X[-1] = 0
+print(X[-1])
+
+#Agrar una fila de solo 8 en la variable X
+print(X)
