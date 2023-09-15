@@ -90,7 +90,4 @@ pmdo_Fila1=np.mean(sumaFila1)
 
 #Editar la ultima fila de la variable X
 X[-1] = 0
-print(X[-1])
-
-#Agrar una fila de solo 8 en la variable X
-print(X)
+# print(X[-1])
